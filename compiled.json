@@ -899,5 +899,7 @@
    "flac": "audio",
    "sr2": "image",
    "srf": "image",
-   "x3f": "image"
+   "x3f": "image",
+   "todo": "placeholder",
+   "ph": "placeholder"
 }
