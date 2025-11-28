@@ -901,5 +901,7 @@
    "srf": "image",
    "x3f": "image",
    "todo": "placeholder",
-   "ph": "placeholder"
+   "ph": "placeholder",
+   "ig": "ignore",
+   "ignore": "ignore"
 }
