@@ -1,0 +1,3 @@
+[submodule "mimetype-io"]
+	path = mimetype-io
+	url = https://github.com/patrickmccallum/mimetype-io

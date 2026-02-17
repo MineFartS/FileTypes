@@ -1,5 +1,4 @@
 from philh_myftp_biz.file import JSON, temp
-from philh_myftp_biz.web import download
 from philh_myftp_biz.array import List
 from philh_myftp_biz.json import Dict
 from philh_myftp_biz.pc import Path
@@ -7,21 +6,16 @@ from philh_myftp_biz.pc import Path
 #
 tempfile = temp('mimetypes', 'json')
 
-#
-download(
-    url = 'https://raw.githubusercontent.com/patrickmccallum/mimetype-io/refs/heads/master/src/mimeData.json',
-    path = tempfile
-)
+# Init raw db
+raw: List[dict] = List(JSON(Path("mimetype-io/src/mimeData.json")))
 
-#
-raw: List[dict] = List(JSON(tempfile))
-
-#
+# Init override db
 override: Dict[str] = Dict(JSON(Path('override.json')))
 
-#
+# Init compiled db
 compiled: Dict[str] = Dict(JSON(Path('compiled.json')))
-#
+
+# Reset compiled db
 compiled.save({})
 
 #
